@@ -9,9 +9,12 @@ public class Aloha{
 			}
 		}
 */
+		int data1 = Integer.parseInt(args[2]);
+		int data2 = Integer.parseInt(args[3]);
 		Alohaman am = new Alohaman();
-//		Alohaman bm = new Alohaman();
-		am.sayAloha(Integer.parseInt(args[0]),Integer.parseInt(args[1]));
+		Alohaman bm = new Alohaman(args[0],args[1]);
+		am.sayAloha(data1,data2);
+		bm.sayAloha(data1,data2);
 	}
 }
 class Alohaman{
@@ -22,6 +25,10 @@ class Alohaman{
 	public Alohaman(){
 		this.msg ="ALOHA!";
 		this.msg2 ="アロハ!";
+	}
+	public Alohaman(String m1,String m2){
+		this.msg =m1;
+		this.msg2 =m2;
 	}
 
 	public void sayAloha(){
